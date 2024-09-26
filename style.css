@@ -1,0 +1,35 @@
+.tudo{
+    background-color: rgb(59, 24, 255);
+}
+
+.MenuLateral{
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: brown;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.main{
+    margin-left: 20%;
+}
+
+.destaque{
+    margin-left: 8%;
+    /*table-layout:fixed;*/
+    padding: 5px 10px;
+    border: 6px solid black;
+    border-spacing: 105px 15px;
+    border-style:groove;
+    background-color: blue;
+    
+    
+}
+
+table, th, tr, td{
+    border: 1px solid black;
+}
