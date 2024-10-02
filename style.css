@@ -1,50 +1,70 @@
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
 .main{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(7, 255, 61, 0.554);    
+}
+
+#bootstrap-overrides h1{
+    font-size:85px;
 }
 
 .titulo{
-    font-size: large;
     text-align: center;
-    font-family: fantasy;
-    background-image: linear-gradient(to left, #553c9a, #b393d3);
-    color: transparent;
-    background-clip: text;
-  -webkit-background-clip: text;
-  font-weight: 600;
+    font-family:Bebas Neue;
+    letter-spacing: 16px;
+    margin:-7px 50px;
+    padding-top:10px;
+    margin-left: 150px;
+    text-transform: uppercase;
+    text-shadow: 5px -5px 5px #ffffff,
+               -6px 0px 3px #aaff00,
+               -12px 0px 5px #f2e600,
+               -14px 0px 2px #ff4400,
+               -16px -15px 10px #eff30d,
+               18px 0px 10px #5100ff,
+               1px 10px 5px rgba(16, 16, 16, 0.5),
+               1px 15px 10px rgba(16, 16, 16, 0.4),
+               1px 20px 30px rgba(16, 16, 16, 0.3),
+               1px 25px 50px rgba(16, 16, 16, 0.2);
+
 }
 
 .searchbar{
-    padding-left: 85%;
+    margin-top: -50px;
+    text-align: right;
 }
 
 .body{
     margin-left:20%;
     position: relative;
+    
 }
+
 
 .table{
-    margin-left: 15%;
-    width: 60%;
+    margin-left: -0,1%;
+    width: 10%;
     border: 1px solid;
-    padding: 1%;
-    padding-left: 15%;
-}
-
-.linha1{
-    border: 1px solid;
+    
     text-align: center;
+    border-collapse: collapse;
+    
 }
 
-.celula11{
-    text-align: center;
+td {
+    width: 33.33%; /* Cada coluna ocupa 1/3 da tabela */
+    padding: 10px;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    vertical-align: middle; /* Centraliza o conteúdo verticalmente */
 }
 
-.produto1{
-    border: 1px solid;
-}
-
-.produto3{
-    border: 1px solid;
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove os espaços entre as células */
 }
 
 .logo{
@@ -61,7 +81,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(0, 140, 255);
+    background-color: rgb(24, 6, 89);
     overflow-x: hidden;
     padding-top: 25px;
     font-size: 25px;
