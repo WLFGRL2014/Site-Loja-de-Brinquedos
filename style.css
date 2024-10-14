@@ -22,6 +22,17 @@ body, html {
   z-index: 1000;
 }
 
+/*Classe botao*/
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ff08; /* Cor de fundo */
+    color: rgb(245, 75, 75); /* Cor do texto */
+    text-align: center;
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px; /* Deixa o botão com bordas arredondadas */
+}
+
 /* Esconde o checkbox de controle */
 .hamburger-toggle {
   display: none;
@@ -165,118 +176,107 @@ body, html {
     margin-top:5px;
 }
 
-.produtoselecionado{
+/*detalhes do produto*/
+
+.detalheproduto{
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Coluna 1 maior, coluna 2 menor */
-    grid-template-rows: auto auto auto auto; /* 4 linhas de altura igual */
-    gap: 10px; /* Espaçamento entre os itens */
-    /* O grid vai ocupar a altura da tela */
-
-     /* Coloca a imagem e o texto lado a lado */
-     /* O item também ocupa toda a largura disponível */
-    max-width: 1000px; /* Define um tamanho máximo, se necessário */
-    border: 2px solid black;
-    padding: 20px;
-    background-color: white;
-    margin: 10px;
-    box-sizing:border-box;
-    flex-wrap:wrap;
-}
-
-.produtoselecionado-imagem{
-    grid-column: 1 / 2; /* Ocupa a primeira coluna */
-    grid-row: 1 / 5; /* Ocupa da linha 1 até a linha 4 */
-    background-color: lightblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.produtoselecionado-titulo{
-    grid-column: 2 / 3; /* Segunda coluna */
-    grid-row: 1 / 2; /* Primeira linha */
-    background-color: lightgreen;
-
-}
-
-.produtoselecionado-descricao{
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    background-color: lightcoral;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    flex-wrap: wrap;
-    text-wrap: break-word;
-
-}
-
-.produtoselecionado-preco{
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-    background-color: lightyellow;
-
-}
-
-.produtoselecionado-botao{
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
-    background-color: lightgray;
-
-}
-
-.produtoselecionado img {
-    width: 500px;
-    
-    height: auto;
-    margin-right: 20px; /* Espaço entre a imagem e o texto */
-    flex-shrink: 0;
-    box-shadow: #2b2929 4px 8px 1px;
-
-    
-}
-
-.produtoselecionado div {
-    display: block;
-    grid-template-columns: ;
-    justify-content: flex-start; /* Alinha o texto ao topo da div*/
-    width: 100%;
-    overflow-wrap:break-word;
-    word-wrap: break-word;
-}
-
-.produtoselecionado a{
-    text-decoration: none;
-    font-weight: bold;
-    font-size:24px;
-    margin-bottom: 10px;
-    word-wrap: break-word;
-}
-
-.produtoselecionado p {
-    margin: 0;
-    word-wrap: break-word;
-    text-align: left; /* Alinha o texto à esquerda */
-}
-
-.produtoselecionado-imagem,
-.produtoselecionado-titulo,
-.produtoselecionado-descricao,
-.produtoselecionado-preco,
-.produtoselecionado-botao {
-    padding: 10px; /* Adiciona padding interno */
-    box-sizing: border-box; /* Inclui padding e bordas no cálculo do tamanho */
-}
-
-#produtoselecionado {
-    display: flex;
-    justify-content: flex-start; /* Alinha os itens à esquerda */
-    align-items: center; /* Centraliza verticalmente os itens */
-    width: 100%; /* Faz o elemento ocupar toda a largura disponível */
-    padding: 20px; /* Adiciona algum espaçamento */
+    grid-template-columns: 2fr 1fr; /*Coluna 1 maior coluna 2 menor*/
+    grid-template-rows: auto auto auto auto; /*4 linhas de altura igual*/
+    gap: 10px;
     box-sizing: border-box;
-    flex-wrap: wrap;
+    border: 2px solid black;
+    background-color: #ff4400;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    /*max-width: 100%; /* Garante que a imagem não ultrapasse os limites da coluna */
+    height: auto;
+    margin-left: 275px;
+    margin-top: 50px;
+    overflow:initial;
+    width:500%;
+
+
 }
+
+.imagemproduto{
+    grid-column: 1/2; /*ocupa primeira coluna*/
+    grid-row: 1/5; /*Ocupa da linha 1 até a linha 4*/
+    background-color: rgb(218, 7, 7);
+    box-sizing: border-box;
+    /*max-width: 100%; /* Garante que a imagem não ultrapasse os limites da coluna */
+    height: auto;
+}
+
+.imagemproduto img{
+    width: 500px;
+    height: 500px;
+}
+
+.tituloproduto{
+    grid-column: 2/3; /*segunda coluna*/
+    grid-row:1/2; /*primeira linha*/
+    background-color: lightgreen;
+    box-sizing: border-box;
+    max-width: 100%; /* Garante que a imagem não ultrapasse os limites da coluna */
+    height: auto;
+    word-wrap: break-word; /* Quebra as palavras que são muito longas */
+    word-break: break-all; /* Quebra qualquer palavra, se necessário */
+    white-space: normal; /* Permite que o texto quebre nas palavras */
+    overflow: auto; /* Adiciona barra de rolagem se o texto for longo */
+    max-height: 150px; /* Limita a altura do texto */
+    transform:translateX(-75px);
+
+
+}
+
+.tituloproduto p{
+    font-size: 35px;
+    font-family: Bebas Neue; 
+}
+
+.descricaoproduto{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: lightblue;
+    box-sizing: border-box;
+    max-width: 100%; /* Garante que a imagem não ultrapasse os limites da coluna */
+    height: auto;
+    word-wrap: break-word; /* Quebra as palavras que são muito longas */
+    word-break: break-all; /* Quebra qualquer palavra, se necessário */
+    white-space: normal; /* Permite que o texto quebre nas palavras */
+    overflow: auto; /* Adiciona barra de rolagem se o texto for longo */
+    max-height: 150px; /* Limita a altura do texto */
+    transform:translateX(-75px);
+
+}
+.valorproduto{
+    grid-column:2/3;
+    grid-row:3/4;
+    background-color: lightyellow;
+    box-sizing: border-box;
+    max-width: 100%; /* Garante que a imagem não ultrapasse os limites da coluna */
+    height: auto;
+    transform:translateX(-75px);
+}
+
+.valorproduto p{
+    word-wrap: break-word; /* Quebra as palavras que são muito longas */
+    word-break: break-all; /* Quebra qualquer palavra, se necessário */
+    white-space: normal; /* Permite que o texto quebre nas palavras */
+    overflow: auto;
+}
+
+.botaocomprar{
+    grid-column:2/3;
+    grid-row:4/5;
+    background-color: lightcoral;
+    box-sizing: border-box;
+    max-width: 100%; /* Garante que a imagem não ultrapasse os limites da coluna */
+    height: auto;
+
+}
+
 
 .products {
     grid-column: 2 / 3;
