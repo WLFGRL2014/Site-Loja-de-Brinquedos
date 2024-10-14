@@ -8,67 +8,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne+Mono&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
 </head>
-<body id="bootstrap-overrides">
-<div class="main">    
-    <div class="header">
-        <div class="titulo">
-            <a href="index.html" style="color:rgb(0, 0, 0)">
-            <h1 align="center" class="titulo2">Digital Devil Saga</h1> 
+
+<body>
+    <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle">
+    <label for="hamburger-toggle" class="hamburger-icon">&#9776;</label>
+
+
+    <div class="grid-container">
+        
+        <!-- Menu lateral & Página de Teste 2!!!!!!-->
+        <div class="menu">
+            <a href="#">
+                <img src="Imagens/logo.png" alt="logo" class="logo"> <!--wdth 150 e height 150-->
             </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categorias.html">Catálogo</a></li>
+                <li><a href="administracao.html">Administração</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
         </div>
-            <div class="searchbar">
-                <form action="/action_page.php">
-                    <div class="input">
-                        <input type="text" placeholder="Search.." name="search" class="forms">
-                        <button type="submit"  class="button">search<i class="fa fa-search"></i></button>
-                    </div>
-                </form>
-            </div>
-           
-    </div>
-     
-    <hr>
+        
 
-    <div class="menulateral">
-        <menu>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="Imagens/logo.png" width="150" height="150">
-                </a>
-            </div>
+        <!-- Cabeçalho -->
+        <div class="header">
+            <h1>Digital Devil Saga</h1>
+            <!--align center-->
+            <form class="search-form">
+                <input type="text" placeholder="Pesquisar...">
+                <button type="submit"><i class="fas fa-search"></i></button> <!--Trocar icone de pesquisa-->
+            </form>
+        </div>
 
-            <div class="menu1">
-                <a href="index.html">
-                    <ul>Home</ul>
-                </a>
-            </div>
-            
-            <div class="menu2">
-                <a href="categorias.html">
-                    <ul>Catálogo</ul>
-                </a>
-            </div>
-
-            <div class="menu3">
-                <a href="administracao.html">
-                    <ul>Administração</ul>
-                </a>
-            </div>
-
-            <div class="menu4">
-                <a href="sobre.html">
-                    <ul>Sobre</ul>
-                </a>
-            </div>
-        </menu>
-    </div>
-
-    <div class="body">
-
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="8000" style="width:55%;left: 20%;">
+        <!-- Imagem estática -->
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="5000">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img class="d-block w-100" src="Imagens/slide1.jpg" alt="First slide">
@@ -81,73 +57,61 @@
               </div>
             </div>
           </div>
-          
-          <br>
 
-
-        <div class="txtbody">
-            <h3>Brinquedos em Destaques</h3>
+        <!-- Título de produtos -->
+        <div class="product-title">
+            <h3>Produtos em destaque</h3>
         </div>
 
-      
-
-        <div class="table" style="text-align: center;">
-            <table cellpadding="10">
-                <tr>
-                    <td>
-                        <a href="Categorias/categoria1/brinquedo1.html">
-                            <img src="Imagens/img32.png" width="150" height="150">
-                            <p align="center">Brinquedo 1</p>
-                        </a>
-                        <p align="center">Descrição</p>
-                    </td>
-                    <td>
-                        <a href="Categorias/categoria1/brinquedo2.html">
-                            <img src="Imagens/img38.png" width="150" height="150">
-                            <p align="center">Brinquedo 2</p>
-                        </a>
-                        <p align="center">Descrição</p>
-                    </td>
-                    <td>
-                        <a href="Categorias/categoria1/brinquedo3.html">
-                            <img src="Imagens/img31.png" width="150" height="150">
-                            <p align="center">Brinquedo 3</p>
-                        </a>
-                        <p align="center">Descrição</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="Categorias/categoria1/brinquedo4.html">
-                            <img src="Imagens/img34.png" width="150" height="150">
-                            <p align="center">Brinquedo 4</p>
-                        </a>
-                        <p align="center">Descrição</p>
-                    </td>
-                    <td>
-                        <a href="Categorias/categoria1/brinquedo5.html">
-                            <img src="Imagens/img25.png" width="150" height="150">
-                            <p align="center">Brinquedo 5</p>
-                        </a>
-                        <p align="center">Descrição</p>
-                    </td>
-                    <td>
-                        <a href="Categorias/categoria1/brinquedo6.html">
+        <!-- Produtos em destaque -->
+        <div class="products">
+            <div class="product-item">
+                <a href="Categorias/categoria1/brinquedo1.html">
+                    <img src="Imagens/img32.png" width="150" height="150">
+                    <p align="center">Brinquedo 1</p>
+                </a>
+                <p align="center">Descrição</p>
+            </div>
+            <div class="product-item">
+                <a href="Categorias/categoria1/brinquedo2.html">
+                    <img src="Imagens/img38.png" width="150" height="150">
+                    <p align="center">Brinquedo 2</p>
+                </a>
+                <p align="center">Descrição</p>
+            </div>
+            <div class="product-item">
+                <a href="Categorias/categoria1/brinquedo3.html">
+                    <img src="Imagens/img31.png" width="150" height="150">
+                    <p align="center">Brinquedo 3</p>
+                </a>
+                <p align="center">Descrição</p>
+            </div>
+            <div class="product-item">
+                <a href="Categorias/categoria1/brinquedo4.html">
+                    <img src="Imagens/img34.png" width="150" height="150">
+                    <p align="center">Brinquedo 4</p>
+                </a>
+                <p align="center">Descrição</p>
+            </div>
+            <div class="product-item">
+                <a href="Categorias/categoria1/brinquedo5.html">
+                    <img src="Imagens/img25.png" width="150" height="150">
+                    <p align="center">Brinquedo 5</p>
+                </a>
+                <p align="center">Descrição</p>
+            </div>
+            <div class="product-item">
+                <a href="Categorias/categoria1/brinquedo6.html">
                             <img src="Imagens/img35.png" width="150" height="150">
                             <p align="center">Brinquedo 6</p>
                         </a>
                         <p align="center">Descrição</p>
-                    </td>
-                </tr>
-            </table>
+            </div>
         </div>
     </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
 </body>
 </html>
