@@ -165,6 +165,119 @@ body, html {
     margin-top:5px;
 }
 
+.produtoselecionado{
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Coluna 1 maior, coluna 2 menor */
+    grid-template-rows: auto auto auto auto; /* 4 linhas de altura igual */
+    gap: 10px; /* Espaçamento entre os itens */
+    /* O grid vai ocupar a altura da tela */
+
+     /* Coloca a imagem e o texto lado a lado */
+     /* O item também ocupa toda a largura disponível */
+    max-width: 1000px; /* Define um tamanho máximo, se necessário */
+    border: 2px solid black;
+    padding: 20px;
+    background-color: white;
+    margin: 10px;
+    box-sizing:border-box;
+    flex-wrap:wrap;
+}
+
+.produtoselecionado-imagem{
+    grid-column: 1 / 2; /* Ocupa a primeira coluna */
+    grid-row: 1 / 5; /* Ocupa da linha 1 até a linha 4 */
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.produtoselecionado-titulo{
+    grid-column: 2 / 3; /* Segunda coluna */
+    grid-row: 1 / 2; /* Primeira linha */
+    background-color: lightgreen;
+
+}
+
+.produtoselecionado-descricao{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: lightcoral;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex-wrap: wrap;
+    text-wrap: break-word;
+
+}
+
+.produtoselecionado-preco{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    background-color: lightyellow;
+
+}
+
+.produtoselecionado-botao{
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    background-color: lightgray;
+
+}
+
+.produtoselecionado img {
+    width: 500px;
+    
+    height: auto;
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+    flex-shrink: 0;
+    box-shadow: #2b2929 4px 8px 1px;
+
+    
+}
+
+.produtoselecionado div {
+    display: block;
+    grid-template-columns: ;
+    justify-content: flex-start; /* Alinha o texto ao topo da div*/
+    width: 100%;
+    overflow-wrap:break-word;
+    word-wrap: break-word;
+}
+
+.produtoselecionado a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size:24px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.produtoselecionado p {
+    margin: 0;
+    word-wrap: break-word;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.produtoselecionado-imagem,
+.produtoselecionado-titulo,
+.produtoselecionado-descricao,
+.produtoselecionado-preco,
+.produtoselecionado-botao {
+    padding: 10px; /* Adiciona padding interno */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo do tamanho */
+}
+
+#produtoselecionado {
+    display: flex;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    align-items: center; /* Centraliza verticalmente os itens */
+    width: 100%; /* Faz o elemento ocupar toda a largura disponível */
+    padding: 20px; /* Adiciona algum espaçamento */
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
 .products {
     grid-column: 2 / 3;
     display: grid;
@@ -196,6 +309,39 @@ body, html {
     margin: 5px 0;
     word-wrap:break-word;
 }
+
+
+
+.loginadm{
+    grid-column: 2/3;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:100px;
+    margin-top: 25px;
+    font-family: Bebas Neue;
+}
+
+.tabela {
+    grid-column: 2/ 2;
+    display: grid;
+    gap: 2px;
+    padding: 2px;
+    height: 550px;
+    font-family: Bebas Neue;
+    
+}
+
+.tabela th{
+    text-align: center;
+    border: 1px solid black;
+}
+
+.tabela td{
+    border: 1px solid black;
+}
+
+
 
 @media (max-width: 768px) {
   .grid-container {
